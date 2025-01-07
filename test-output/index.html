@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -113,12 +113,22 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.toolshop.tests.BrandPostValidationTests" class="method navigator-link" hash-for-method="createNewBrandWithValidData">createNewBrandWithValidData</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.toolshop.tests.BrandPostValidationTests" class="method navigator-link" hash-for-method="createNewBrandWithValidData(org.testng.TestRunner@62833051)">createNewBrandWithValidData(org.testng.TestRunner@62833051)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.toolshop.tests.BrandApiTest" class="method navigator-link" hash-for-method="testGetBrands">testGetBrands</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.toolshop.tests.BrandGetValidationTest" class="method navigator-link" hash-for-method="getAllBrands">getAllBrands</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.toolshop.tests.BrandGetValidationTest" class="method navigator-link" hash-for-method="getBrandByInValidId">getBrandByInValidId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.toolshop.tests.BrandGetValidationTest" class="method navigator-link" hash-for-method="getBrandByValidId(org.testng.TestRunner@62833051)">getBrandByValidId(org.testng.TestRunner@62833051)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -136,14 +146,29 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.toolshop.tests.BrandApiTest</span>
+              <span class="class-name">com.toolshop.tests.BrandGetValidationTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testGetBrands">
-                  </a> <!-- testGetBrands -->
-                  <span class="method-name">testGetBrands</span>
+                  <a name="getAllBrands">
+                  </a> <!-- getAllBrands -->
+                  <span class="method-name">getAllBrands</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getBrandByInValidId">
+                  </a> <!-- getBrandByInValidId -->
+                  <span class="method-name">getBrandByInValidId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getBrandByValidId(org.testng.TestRunner@62833051)">
+                  </a> <!-- getBrandByValidId(org.testng.TestRunner@62833051) -->
+                  <span class="method-name">getBrandByValidId</span>
+                  <span class="parameters">(org.testng.TestRunner@62833051)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -170,9 +195,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="createNewBrandWithValidData">
-                  </a> <!-- createNewBrandWithValidData -->
+                  <a name="createNewBrandWithValidData(org.testng.TestRunner@62833051)">
+                  </a> <!-- createNewBrandWithValidData(org.testng.TestRunner@62833051) -->
                   <span class="method-name">createNewBrandWithValidData</span>
+                  <span class="parameters">(org.testng.TestRunner@62833051)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,8 +218,8 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.toolshop.tests.BrandApiTest&quot;/&gt;
       &lt;class name=&quot;com.toolshop.tests.BrandPostValidationTests&quot;/&gt;
+      &lt;class name=&quot;com.toolshop.tests.BrandGetValidationTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -233,28 +259,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testGetBrands')
-data.setCell(0, 2, 'com.toolshop.tests.BrandApiTest')
-data.setCell(0, 3, 7871);
+data.setCell(0, 1, 'createNewBrandWithValidData')
+data.setCell(0, 2, 'com.toolshop.tests.BrandPostValidationTests')
+data.setCell(0, 3, 9536);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createNewBrandWithValidData')
+data.setCell(1, 1, 'createNewBrandWithMissingSlugField')
 data.setCell(1, 2, 'com.toolshop.tests.BrandPostValidationTests')
-data.setCell(1, 3, 2361);
+data.setCell(1, 3, 1221);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'createNewBrandWithMissingSlugField')
+data.setCell(2, 1, 'createNewBrandWithMissingNameField')
 data.setCell(2, 2, 'com.toolshop.tests.BrandPostValidationTests')
-data.setCell(2, 3, 947);
+data.setCell(2, 3, 724);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'createNewBrandWithMissingNameField')
-data.setCell(3, 2, 'com.toolshop.tests.BrandPostValidationTests')
-data.setCell(3, 3, 776);
+data.setCell(3, 1, 'getBrandByValidId')
+data.setCell(3, 2, 'com.toolshop.tests.BrandGetValidationTest')
+data.setCell(3, 3, 711);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'getAllBrands')
+data.setCell(4, 2, 'com.toolshop.tests.BrandGetValidationTest')
+data.setCell(4, 3, 699);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'getBrandByInValidId')
+data.setCell(5, 2, 'com.toolshop.tests.BrandGetValidationTest')
+data.setCell(5, 3, 674);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -280,25 +314,33 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.toolshop.tests.BrandApiTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testGetBrands</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">com.toolshop.tests.BrandPostValidationTests</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">createNewBrandWithValidData</span>
-                <span class="method-start">7894 ms</span>
+                <span class="method-name">createNewBrandWithValidData(org.testng.TestRunner@62833051)</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createNewBrandWithMissingNameField</span>
-                <span class="method-start">10262 ms</span>
+                <span class="method-start">9546 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createNewBrandWithMissingSlugField</span>
-                <span class="method-start">11053 ms</span>
+                <span class="method-start">10274 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.toolshop.tests.BrandGetValidationTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">getAllBrands</span>
+                <span class="method-start">11502 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getBrandByValidId(org.testng.TestRunner@62833051)</span>
+                <span class="method-start">12206 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getBrandByInValidId</span>
+                <span class="method-start">12922 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

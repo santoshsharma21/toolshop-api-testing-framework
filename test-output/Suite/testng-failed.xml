@@ -8,6 +8,7 @@
     <classes>
       <class name="com.toolshop.tests.BrandPostValidationTests">
         <methods>
+          <include name="createNewBrandWithMissingSlugField"/>
           <include name="createNewBrandWithMissingNameField"/>
         </methods>
       </class> <!-- com.toolshop.tests.BrandPostValidationTests -->

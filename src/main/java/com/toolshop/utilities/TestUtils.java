@@ -131,10 +131,11 @@ public class TestUtils {
 //		String r = """
 //		        [
 //		          {"id": 101, "name": "Brand A", "category": "Electronics"},
-//		          {"id": 102, "name": "Brand B", "category": "Fashion"}
+//		          {"id": 102, "name": bb, "category": "Fashion"}
 //		        ]
 //		        """;
 //		
-//		System.out.println(isSingleObjectInArray(r));
+//		System.out.println(isFieldEmptyyy(r, false, true, "name"));
+//		String ss = "ab";
 //	}
 }

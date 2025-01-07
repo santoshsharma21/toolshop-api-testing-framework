@@ -36,7 +36,7 @@ public class ExtentReportUtils {
 			logText("Request Payload Details");
 			logJson(query.getBody().toString());
 		} else {
-			logText(query.getBaseUri() + endpoint);
+			logText("Endpoint: " + endpoint);
 			logText("Http Method: " + method);
 		}
 	}

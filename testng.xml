@@ -6,8 +6,8 @@
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.toolshop.tests.BrandApiTest"/>
       <class name="com.toolshop.tests.BrandPostValidationTests"/>
+      <class name="com.toolshop.tests.BrandGetValidationTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

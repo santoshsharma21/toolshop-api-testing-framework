@@ -25,20 +25,26 @@ public class BrandPostValidationTests {
 		// get request payload
 		BrandsPojo reqPayload = BrandsPayload.getNewBrandPayload();
 		context.setAttribute("reqPayload", reqPayload);
+		
 		// post call
 		Response response = BrandApi.postBrand(reqPayload);
+		
 		// get id and store id
 		int id = TestUtils.getIntValue(response, "id");
 		context.setAttribute("brandid", id);
+		
 		// validation
-		Assert.assertEquals(TestUtils.getStatusCode(response), 201);
-		Assert.assertTrue(id >= 0);
-		Assert.assertEquals(TestUtils.getStringValue(response, "name"), reqPayload.getName());
-		Assert.assertEquals(TestUtils.getStringValue(response, "slug"), reqPayload.getSlug());
-		Assert.assertTrue(TestUtils.validateIntDataType(response, "id"));
-		Assert.assertTrue(TestUtils.validateStringDataType(response, "name"));
-		Assert.assertTrue(TestUtils.validateStringDataType(response, "slug"));
-		Assert.assertEquals(TestUtils.getResponseHeaderValue(response, "content-type"), "application/json");
+		// validate status code
+		Assert.assertEquals(TestUtils.getStatusCode(response), 201, "expected status code is 201");
+		
+		// validate response body fields
+		Assert.assertTrue(id >= 0, "id is negative value");
+		Assert.assertTrue(TestUtils.validateIntDataType(response, "id"), "expected data type is int");
+		Assert.assertEquals(TestUtils.getStringValue(response, "name"), reqPayload.getName(), "name field is different");
+		Assert.assertEquals(TestUtils.getStringValue(response, "slug"), reqPayload.getSlug(), "slug field is different");
+		Assert.assertTrue(TestUtils.validateStringDataType(response, "name"), "expected data type is string");
+		Assert.assertTrue(TestUtils.validateStringDataType(response, "slug"), "expected data type is string");
+		Assert.assertTrue(TestUtils.getResponseHeaderValue(response, "content-type").contains("application/json"),"expected content-type is application/json");
 	}
 
 	// create resource with missing field
@@ -46,23 +52,33 @@ public class BrandPostValidationTests {
 	public void createNewBrandWithMissingNameField() {
 		// get request payload
 		BrandsPojo reqPayload = BrandsPayload.getMissingNameFieldBrandPayload();
+		
 		// post call
 		Response response = BrandApi.postBrand(reqPayload);
+		
 		// validation
-		Assert.assertEquals(TestUtils.getStatusCode(response), 422);
-		Assert.assertEquals(TestUtils.getStringFromJsonArray(response, "name"), "The name field is required.");
-		Assert.assertEquals(TestUtils.getResponseHeaderValue(response, "content-type"), "application/json");
+		// validate status code
+		Assert.assertEquals(TestUtils.getStatusCode(response), 422, "expected status code is 422");
+		
+		// validate response body fields
+		Assert.assertEquals(TestUtils.getStringFromJsonArray(response, "name"),"The name field is required.","expected name field empty");
+		Assert.assertTrue(TestUtils.getResponseHeaderValue(response, "content-type").contains("application/json"),"expected content-type is application/json");
 	}
 
 	@Test(priority = 2)
 	public void createNewBrandWithMissingSlugField() {
 		// get request payload
 		BrandsPojo reqPayload = BrandsPayload.getMissingSlugFieldBrandPayload();
+		
 		// post call
 		Response response = BrandApi.postBrand(reqPayload);
+		
 		// validation
-		Assert.assertEquals(TestUtils.getStatusCode(response), 422);
-		Assert.assertEquals(TestUtils.getStringFromJsonArray(response, "slug"), "The slug field is required.");
-		Assert.assertEquals(TestUtils.getResponseHeaderValue(response, "content-type"), "application/json");
+		// validate status code
+		Assert.assertEquals(TestUtils.getStatusCode(response), 422, "expected status code is 422");
+		
+		// validate response body fields
+		Assert.assertEquals(TestUtils.getStringFromJsonArray(response, "slug"),"The slug field is required.","expected slug field empty");
+		Assert.assertTrue(TestUtils.getResponseHeaderValue(response, "content-type").contains("application/json"),"expected content-type is application/json");
 	}
 }

@@ -31,7 +31,7 @@ public class BrandPostValidationTests {
 		
 		// get id and store id
 		int id = TestUtils.getIntValue(response, "id");
-		context.setAttribute("brandid", id);
+		context.setAttribute("brandId", id);
 		
 		// validation
 		// validate status code

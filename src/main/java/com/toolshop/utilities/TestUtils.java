@@ -32,6 +32,12 @@ public class TestUtils {
 		JSONObject obj = new JSONObject(response.asString());
 		return obj.getString(key);
 	}
+	
+	// return string value
+	public static boolean getBooleanValue(Response response, String key) {
+		JSONObject obj = new JSONObject(response.asString());
+		return obj.getBoolean(key);
+	}
 
 	// return string from internal json array
 	public static String getStringFromJsonArray(Response response, String arrayName) {
